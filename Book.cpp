@@ -17,7 +17,7 @@ bool Book::add() {
     std::string str = " insert into Books (name, author, price, quantity) "
                       "values ('" + _name + "', '" + _author + "', '" + std::to_string(_price) + "', '" +
                       std::to_string(_quantity) + "')";
-    
+
     std::cout << str << std::endl;
     char *query = const_cast <char *>(str.c_str());
 
