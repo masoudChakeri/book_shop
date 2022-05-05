@@ -19,6 +19,10 @@ public:
     static DataBase *GetInstance();
 
     MYSQL_RES *query(char *query);
+
+    static void showResult(MYSQL_RES *result);
+
+    ~DataBase();
 };
 
 #endif //BOOKSHOP_DATABASE_H

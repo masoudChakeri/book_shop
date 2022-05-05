@@ -18,11 +18,17 @@ bool Book::add() {
                       "values ('" + _name + "', '" + _author + "', '" + std::to_string(_price) + "', '" +
                       std::to_string(_quantity) + "')";
 
-    std::cout << str << std::endl;
     char *query = const_cast <char *>(str.c_str());
 
     _db->query(strdup(query));
     return true;
+}
+
+void Book::displayAll() {
+    std::string str = "select id, name from Books;";
+    char *query = const_cast<char *>(str.c_str());
+
+    DataBase::showResult(_db->query(query));
 }
 
 

@@ -16,17 +16,19 @@ private:
     int _price;
     int _quantity;
 
-    DataBase* _db;
+    DataBase *_db;
 public:
     Book();
 
     bool add();
 
-    bool remove();
-
-    bool update();
+    void displayAll();
 
     void display();
+
+    bool remove(int id);
+
+    bool update();
 };
 
 

@@ -14,7 +14,7 @@ int main() {
 
     DataBase::GetInstance();
     Book book;
-    book.add();
-
+//    book.add();
+    book.displayAll();
     return 0;
 }
