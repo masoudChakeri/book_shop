@@ -1,3 +1,0 @@
-/home/masoud/Documents/Projects/C++/BookShop/cmake-build-debug/CMakeFiles/BookShop.dir
-/home/masoud/Documents/Projects/C++/BookShop/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/masoud/Documents/Projects/C++/BookShop/cmake-build-debug/CMakeFiles/rebuild_cache.dir
