@@ -26,7 +26,7 @@ public:
 
     void display();
 
-    bool remove(int id);
+    bool remove();
 
     bool update();
 };

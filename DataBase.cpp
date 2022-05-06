@@ -26,11 +26,11 @@ DataBase *DataBase::GetInstance() {
 }
 
 MYSQL_RES *DataBase::query(char *query) {
+    std::cout << query << std::endl;
     if (mysql_query(_connection, query)) {
         printf("MySQL query error : %s\n", mysql_error(_connection));
         exit(1);
     }
-
     return mysql_store_result(_connection);
 }
 
@@ -41,8 +41,14 @@ void DataBase::showResult(MYSQL_RES *result) {
         MYSQL_ROW row;
 
         while ((row = mysql_fetch_row(result))) {
-            for (int i = 0; i < numFields; i++) {
-                (i % numRows == 0) ? std::cout << "\n" << row[i] << "- " : std::cout << row[i] << "\t";
+            if (numRows == 1) {
+                for (int i = 0; i < numFields; ++i) {
+                    (i == 0) ? std::cout << row[i] << "- " : std::cout << row[i] << "   ";
+                }
+            } else {
+                for (int i = 0; i < numFields; i++) {
+                    (i % numRows == 0) ? std::cout << "\n" << row[i] << "- " : std::cout << row[i] << "\t";
+                }
             }
         }
 
